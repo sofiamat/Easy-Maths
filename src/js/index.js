@@ -1,42 +1,85 @@
-//========= INDEX.................
+const userName = localStorage.getItem("userName");
 
-const input = document.querySelector("#name");
-const error = document.querySelector("#error-message");
-const btn = document.querySelector("#button-link");
-const userName = document.querySelector(".user-name");
-if (userName) {
-  userName.textContent = localStorage.getItem("userName");
-}
+document.querySelector(".user-name").textContent = userName;
 
-const handleWriteChecking = (event) => {
-  const value = event.target.value.trim();
+const quizzes = document.querySelectorAll(".quiz");
+const finishButton = document.querySelector(".test-finir");
+const modal = document.querySelector(".modal");
+const modalTitle = document.querySelector(".modal-title");
+const modalScore = document.querySelector(".modal-score");
+const modalText = document.querySelector(".modal-text");
 
-  if (value.length >= 3) {
-    btn.classList.add("active");
-    error.classList.remove("show");
-  } else {
-    btn.classList.remove("active");
-    error.classList.add("show");
+let score = 0;
+
+// ================= TEST =================
+
+quizzes.forEach((quiz) => {
+  const inputs = quiz.querySelectorAll("input");
+  const message = quiz.querySelector(".wrong-message");
+
+  inputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      inputs.forEach((i) => {
+        i.disabled = true;
+      });
+
+      inputs.forEach((i) => {
+        if (i.value === "true") {
+          i.parentElement.classList.add("correct");
+        }
+        if (i.value === "false") {
+          i.parentElement.classList.add("wrong");
+        }
+      });
+
+      if (input.value === "true") {
+        score++;
+
+        message.classList.add("green");
+      } else {
+        message.classList.add("red");
+      }
+
+      message.style.display = "block";
+    });
+  });
+});
+
+// ================= BUTTON =================
+
+finishButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  let answered = 0;
+
+  quizzes.forEach((quiz) => {
+    if (quiz.querySelector("input:checked")) {
+      answered++;
+    }
+  });
+
+  if (answered < 8) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    return;
   }
-};
-if (input) {
-  input.addEventListener("input", handleWriteChecking);
-}
 
-const handleClickChecking = (event) => {
-  const value = input.value.trim();
+  modal.classList.add("show");
 
-  if (value.length < 3) {
-    event.preventDefault();
-    error.classList.add("show");
+  modalTitle.textContent = `Félicitations ${userName}!`;
+
+  modalScore.textContent = `${score}/8 (${Math.round((score / 8) * 100)}%)`;
+
+  // результат
+
+  if (score <= 3) {
+    modalText.textContent = "Je sais que vous povez faire mieux!";
+  } else if (score <= 6) {
+    modalText.textContent =
+      "Pas mal ! Mais votre objectif est encore devant vous!";
   } else {
-    localStorage.setItem("userName", input.value);
-
-    error.classList.remove("show");
+    modalText.textContent = "Félicitations ! Votre objectif est accompli!";
   }
-};
-
-if (btn) {
-  btn.addEventListener("click", handleClickChecking);
-}
-//========= MATHS.................
+});

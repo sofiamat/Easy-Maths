@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="./images/page-icon.svg" type="image/svg+xml" /> іконка сайту-->
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!--.................... HEADER.................... -->
+    <header class="maths-header">
+      <div class="container header-container">
+        <div class="maths-div">
+          <div class="div-icons header-div-icons">
+            <ul class="list">
+              <li class="link">
+                <button data-aos="zoom-in" class="button clair-blue">
+                  <svg class="icons header-icons">
+                    <use href="../img/symboles-maths.svg#icon-book"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <h1 data-aos="fade-down" class="maths-title">
+            Apprendre le Théorème
+          </h1>
+          <p class="user-name">User</p>
+        </div>
+      </div>
+    </header>
+    <!--.................... LEARN.................... -->
+    <section class="learn">
+      <div class="container learn-container">
+        <div class="learn-div">
+          <div class="maths-about">
+            <h3 class="maths-title">Le Théorème de Pythagore</h3>
+            <p class="maths-text">
+              Dans un triangle, le carré de l'hypoténuse (le côté le plus long,
+              opposé à l'angle droit) est égal à la somme des carrés des deux
+              autres côtés.
+            </p>
+          </div>
+          <div class="learn-methode">
+            <img
+              data-aos="flip-left"
+              width="550px"
+              class="learn-img"
+              src="../img/maths/5bfa67b8-b943-481d-94db-b781edb27176 (2).png"
+              alt="formule for pythagore"
+            />
+          </div>
+          <div class="learn-info">
+            <p class="info-text">
+              <span class="span-blue">- a</span> et
+              <span class="span-blue">b</span> sont les côtés l'angle droit
+            </p>
+            <p class="info-text">
+              <span class="span-blue">- c</span> est l'hypoténuse (le côté le
+              plus long)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--.................... EXEMPLE.................... -->
+    <section class="exemple">
+      <div class="container exemple-container">
+        <div data-aos="fade-right" class="exemple-div">
+          <div class="maths-about">
+            <h3 class="maths-title">Exemple Pratique</h3>
+            <p class="maths-text">
+              Un triangle restangle a des côtés de
+              <span class="span-blue">3 cm</span> et
+              <span class="span-blue">4 cm</span>. Quelle est la longueur de
+              l'hypoténuse ?
+            </p>
+          </div>
+          <div class="exemple-formule">
+            <p class="info-text">a = 3cm, b = 4cm</p>
+
+            <p class="info-text">c² = 3² + 4²</p>
+
+            <p class="info-text">c² = 9 + 16</p>
+
+            <p class="info-text">c² = 25</p>
+
+            <p class="info-text">
+              <span class="span-blue">c = 5 cm</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--.................... RECIPROQUE.................... -->
+    <section class="reciproque">
+      <div class="container reciproque-container">
+        <div class="reciproque-div" data-aos="fade-left">
+          <div class="maths-about">
+            <h3 class="maths-title">La Réciproque Théorème</h3>
+            <p class="maths-text">
+              Si dans un triangle, le carré du côté le plus long est égal à la
+              somme des carrés des deux autres côtés, alors ce triangle est
+              restangle
+            </p>
+          </div>
+          <div class="reciproque-formule">
+            <p class="reciproque-formule-text">
+              Si c² = a² + b², alors le triangle est rectangle en A
+            </p>
+          </div>
+          <div class="reciproque-methode">
+            <p class="reciproque-methode-exemple">Exemple :</p>
+            <p class="info-text">
+              Un triangle a des côtés de 5 cm, 12 cm et 13 cm.
+            </p>
+            <p class="info-text">13² = 169 et 5² + 12² = 25 + 144 = 169</p>
+            <p class="reciproque-methode-text">
+              <span class="span-blue">Donc ce triangle est rectangle !</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--.................... RESUME.................... -->
+    <section class="resume">
+      <div class="container resume-container">
+        <div class="resume-div" data-aos="flip-up">
+          <h3 class="maths-title">Résumé pour révision</h3>
+          <p class="maths-text">
+            <span class="span-blue">- </span>Le théorème s'applique uniquement
+            aux triangles rectangles
+          </p>
+          <p class="maths-text">
+            <span class="span-blue">- </span>L'hypoténuse est toujours le côté
+            le plus long
+          </p>
+          <p class="maths-text">
+            <span class="span-blue">- </span>La réciproque permet de vérifier si
+            un triangle est rectangle
+          </p>
+          <p class="maths-text">
+            <span class="span-blue">- </span>Formule : a² + b² = c²
+          </p>
+        </div>
+        <a class="maths-passer" href="../page-test/test.html">Passer le test</a>
+      </div>
+    </section>
+    <!--.................... FOOTER.................... -->
+    <footer class="presentation-footer">
+      <div class="container footer-container"></div>
+    </footer>
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

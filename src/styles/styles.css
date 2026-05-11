@@ -1,0 +1,477 @@
+:root {
+  /* шрифти */
+  --fontpPrimery: "RobotoCondensed", serif;
+  --fontSecondairy: "WorkSans", serif;
+  /* кольори */
+  --background-color: #e8eef7;
+  --title-color: black;
+  --text-color: grey;
+  --button-text-color: white;
+  --button-input-color: rgb(130, 130, 218);
+  --button-color: rgb(62, 62, 222);
+  --button-hover-color: rgb(76, 76, 216);
+  --button-color-second: rgb(127, 47, 239);
+  --button-hover-color-second: rgb(139, 88, 234);
+  --right-answer-color: rgb(162, 230, 162);
+  --wronge-answer-color: rgb(223, 130, 130);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.001em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+/*====================== =======================INDEX================================= */
+/* <!--.................... HEADER.................... --> */
+
+.presentation-title {
+  font-size: 56px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.presentation-about {
+  text-align: center;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+.presentation-about:hover {
+  color: rgb(77, 76, 76);
+}
+
+/* <!--.................... PRESENTATION.................... --> */
+
+.presentation {
+  margin-top: 15px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  gap: 85px;
+}
+
+.button {
+  width: 85px;
+  height: 85px;
+  border-radius: 17px;
+  box-shadow: 1px 4px 10px rgb(173, 173, 173);
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 5px 15px 10px rgb(173, 173, 173);
+}
+
+.icons {
+  width: 39px;
+  height: 39px;
+  fill: white;
+}
+
+.dark-blue {
+  background-color: rgb(45, 129, 255);
+}
+
+.dark-blue:hover {
+  background-color: rgb(42, 118, 232);
+}
+
+.blue {
+  background-color: rgb(111, 21, 255);
+}
+
+.blue:hover {
+  background-color: rgb(105, 20, 240);
+}
+
+.violet {
+  background-color: blueviolet;
+}
+
+.violet:hover {
+  background-color: rgb(119, 37, 196);
+}
+
+.pink {
+  background-color: rgb(250, 59, 196);
+}
+
+.pink:hover {
+  background-color: rgb(203, 47, 159);
+}
+
+/*     <!--.................... MAIN.................... --> */
+.presentation-register {
+  background-color: var(--button-text-color);
+  /* justify-content: center;
+  width: auto;
+  flex-wrap: wrap; */
+  padding: 55px;
+  border-radius: 25px;
+  margin: 15px 250px;
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+  transition: 0.5s ease;
+}
+
+.presentation-register:hover {
+  box-shadow: 1px 4px 5px rgb(203, 202, 202);
+}
+
+.presentation-div-input {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.presentation-label {
+  font-weight: 500;
+}
+
+.presentation-input {
+  border: 2px solid rgb(224, 224, 224);
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s ease;
+  background-color: rgb(244, 244, 244);
+}
+
+.presentation-input:focus {
+  border: 2px solid rgb(48, 48, 196);
+}
+
+.presentation-input-error {
+  color: red;
+  font-size: 18px;
+  display: none;
+}
+
+.presentation-input-error.show {
+  color: red;
+  font-size: 18px;
+  display: block;
+}
+
+.presentation-info {
+  width: fit-content;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.presentation-text {
+  text-align: left;
+}
+
+.presentation-commencer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin: 30px auto 0;
+  background-color: var(--button-input-color);
+
+  padding: 10px 0;
+  color: white;
+  transition: 0.5s ease;
+
+  border-radius: 17px;
+  width: 350px;
+  box-shadow: 1px 2px 10px rgb(195, 194, 194);
+  pointer-events: none;
+
+  transition: 0.3s ease;
+}
+
+.presentation-commencer.active {
+  pointer-events: auto;
+  background-color: var(--button-color);
+  box-shadow: 1px 4px 10px rgb(173, 173, 173);
+}
+/*==============================================MATHS================================= */
+/*<!--.................... HEADER.................... --> */
+
+.user-name {
+  margin-left: auto;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+.user-name:hover {
+  transform: scale(0.9);
+  color: var(--text-color);
+}
+
+.maths-div {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.clair-blue {
+  background-color: rgba(161, 209, 242, 0.292);
+
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgb(152, 165, 237);
+}
+
+.clair-blue:hover {
+  background-color: rgba(82, 164, 218, 0.292);
+}
+
+.header-icons {
+  fill: rgb(78, 100, 220);
+  transition: 0.3s ease;
+}
+
+.clair-blue:hover .header-icons {
+  fill: rgb(255, 255, 255);
+}
+
+/*<!--.................... LEARN.................... --> */
+
+.maths-text {
+  font-size: 20px;
+  color: rgb(78, 78, 78);
+}
+
+.learn-div {
+  background-color: var(--button-text-color);
+  padding: 55px;
+  border-radius: 25px;
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+  transition: 0.5s ease;
+}
+
+.learn-div:hover {
+  box-shadow: 1px 4px 5px rgb(203, 202, 202);
+}
+
+.maths-about {
+  gap: 50px;
+}
+
+.maths-about {
+  margin-bottom: 10px;
+}
+
+.learn-img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid rgb(244, 244, 244);
+  border-radius: 25px;
+}
+
+.learn-info {
+  margin-top: 10px;
+}
+
+.span-blue {
+  color: blue;
+}
+
+/*<!--.................... EXEMPLE.................... --> */
+
+.exemple-div {
+  background-color: var(--button-text-color);
+  padding: 55px;
+  border-radius: 25px;
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+  transition: 0.5s ease;
+}
+
+.exemple-div:hover {
+  box-shadow: 1px 4px 5px rgb(203, 202, 202);
+}
+
+.exemple-formule {
+  background-color: rgb(227, 237, 248);
+  padding: 25px;
+  border: 1px solid rgb(65, 90, 181);
+  border-radius: 25px;
+  transition: 0.5s ease;
+}
+
+.exemple-formule:hover {
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+}
+
+/*<!--.................... RECIPROQUES.................... --> */
+
+.reciproque-div {
+  background-color: var(--button-text-color);
+  padding: 55px;
+  border-radius: 25px;
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+  transition: 0.5s ease;
+}
+
+.reciproque-div:hover {
+  box-shadow: 1px 4px 5px rgb(203, 202, 202);
+}
+
+.reciproque-formule {
+  background-color: rgb(227, 237, 248);
+  padding: 25px;
+  border: 1px solid rgb(65, 90, 181);
+  border-radius: 25px;
+  transition: 0.5s ease;
+  margin-bottom: 20px;
+}
+
+.reciproque-formule:hover {
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+}
+
+.reciproque-methode {
+  background-color: rgb(246, 246, 246);
+  padding: 25px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 25px;
+  transition: 0.5s ease;
+}
+
+.reciproque-methode:hover {
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+}
+
+/*<!--.................... RESUME.................... --> */
+
+.resume-div {
+  background-color: rgb(227, 237, 248);
+  padding: 55px;
+  border-radius: 25px;
+  border: 1px solid rgb(65, 90, 181);
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+  transition: 0.5s ease;
+}
+
+.resume-div:hover {
+  box-shadow: 1px 4px 5px rgb(180, 183, 201);
+}
+
+.maths-passer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin: 30px auto 0;
+  background-color: var(--button-input-color);
+  padding: 10px 0;
+  color: white;
+  transition: 0.5s ease;
+  border-radius: 17px;
+  width: 350px;
+  box-shadow: 1px 2px 10px rgb(195, 194, 194);
+  transition: 0.3s ease;
+}
+
+.maths-passer:hover {
+  background-color: var(--button-color);
+  box-shadow: 1px 4px 10px rgb(173, 173, 173);
+}
+
+/*==============================================TEST================================= */
+
+.quiz {
+  background-color: var(--button-text-color);
+  padding: 55px;
+  border-radius: 25px;
+  box-shadow: 1px 4px 1px rgb(241, 240, 240);
+  transition: 0.5s ease;
+}
+
+.quiz:hover {
+  box-shadow: 1px 4px 5px rgb(203, 202, 202);
+}
+
+.test-div {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 2px solid var(--text-color);
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.answer:hover {
+  transform: scale(0.98);
+  background-color: #e3e3e3;
+}
+
+.test-finir {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin: 30px auto 0;
+  background-color: var(--button-input-color);
+  padding: 10px 0;
+  color: white;
+  transition: 0.5s ease;
+  border-radius: 17px;
+  width: 350px;
+  box-shadow: 1px 2px 10px rgb(195, 194, 194);
+  transition: 0.3s ease;
+}
+
+.test-finir:hover {
+  background-color: var(--button-color);
+  box-shadow: 1px 4px 10px rgb(173, 173, 173);
+}
+
+.wrong-message {
+  display: none;
+}
+
+.wrong-message.green {
+  background-color: var(--right-answer-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(21, 154, 21);
+  display: block;
+}
+
+.wrong-message.red {
+  background-color: var(--wronge-answer-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(154, 21, 21);
+  display: block;
+}

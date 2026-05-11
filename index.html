@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="./images/page-icon.svg" type="image/svg+xml" /> іконка сайту-->
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Théorème de Pythagore</title>
+  </head>
+
+  <body>
+    <!--.................... HEADER.................... -->
+    <header class="presentation-header">
+      <div class="container header-container">
+        <h1 data-aos="fade-down" class="presentation-title">
+          Théorème de Pythagore
+        </h1>
+        <p class="presentation-about">Apprenez et testez vos connaissances</p>
+      </div>
+    </header>
+    <!--.................... PRESENTATION.................... -->
+    <section class="presentation">
+      <div class="container presentation-container">
+        <div class="div-icons">
+          <ul class="list">
+            <li class="link">
+              <button data-aos="zoom-in" class="button dark-blue">
+                <svg class="icons">
+                  <use
+                    href="./src/img/symboles-maths.svg#icon-calculator"
+                  ></use>
+                </svg>
+              </button>
+            </li>
+            <li class="link">
+              <button data-aos="zoom-in" class="button blue">
+                <svg class="icons">
+                  <use href="./src/img/symboles-maths.svg#icon-tools"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="link">
+              <button data-aos="zoom-in" class="button violet">
+                <svg class="icons">
+                  <use href="./src/img/symboles-maths.svg#icon-book"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="link">
+              <button data-aos="zoom-in" class="button pink">
+                <svg class="icons">
+                  <use href="./src/img/symboles-maths.svg#icon-school"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--.................... MAIN.................... -->
+    <main class="presentation-main">
+      <div class="container main-container">
+        <div class="presentation-register">
+          <div class="presentation-div-input">
+            <label class="presentation-label" for="name"
+              >Entrez votre prénom</label
+            >
+
+            <input
+              class="presentation-input"
+              type="text"
+              id="name"
+              placeholder="Votre prénom..."
+            />
+            <p class="presentation-input-error" id="error-message">
+              veuillez écrire votre prénom avec au moins 3 lettres!!
+            </p>
+          </div>
+          <div class="presentation-info">
+            <p class="presentation-text">
+              ✨ Le prénom est utilisé uniquement pour le classement
+            </p>
+            <p class="presentation-text">
+              ✨ Vos résultats seront enregistrés localement
+            </p>
+          </div>
+        </div>
+        <a
+          class="presentation-commencer"
+          id="button-link"
+          href="../src/page-maths/maths.html"
+          >Commencer</a
+        >
+      </div>
+    </main>
+    <!--.................... FOOTER.................... -->
+    <footer class="presentation-footer">
+      <div class="container footer-container"></div>
+    </footer>
+    <script type="module" src="./src/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -216,7 +216,7 @@ body {
 
 .user-name:hover {
   transform: scale(0.9);
-  color: var(--text-color);
+  color: rgb(84, 84, 222);
 }
 
 .maths-div {
@@ -541,4 +541,89 @@ body {
 .modal-button:hover {
   background-color: var(--button-color);
   box-shadow: 1px 4px 10px rgb(173, 173, 173);
+}
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .presentation-title {
+    font-size: 36px;
+  }
+
+  .presentation-register {
+    margin: 15px 0;
+    padding: 25px;
+  }
+
+  .presentation-input {
+    padding: 15px;
+  }
+
+  .presentation-commencer,
+  .maths-passer,
+  .test-finir,
+  .modal-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .list {
+    gap: 20px;
+  }
+
+  .button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icons {
+    width: 30px;
+    height: 30px;
+  }
+
+  .learn-div,
+  .exemple-div,
+  .reciproque-div,
+  .resume-div,
+  .quiz {
+    padding: 25px;
+  }
+
+  .learn-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .test-div,
+  .maths-div {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .user-name {
+    margin-left: 0;
+  }
+
+  .answer {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .modal-test {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
 }

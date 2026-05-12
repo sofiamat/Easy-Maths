@@ -1,6 +1,23 @@
-const userName = localStorage.getItem("userName");
+const input = document.querySelector(".presentation-input");
+const button = document.querySelector(".presentation-commencer");
 
-document.querySelector(".user-name").textContent = userName;
+if (input && button) {
+  input.addEventListener("input", () => {
+    if (input.value.trim().length >= 3) {
+      button.classList.add("active");
+
+      localStorage.setItem("userName", input.value);
+    } else {
+      button.classList.remove("active");
+    }
+  });
+}
+
+const userName = localStorage.getItem("userName");
+const user = document.querySelector(".user-name");
+if (user) {
+  user.textContent = userName;
+}
 
 const quizzes = document.querySelectorAll(".quiz");
 const finishButton = document.querySelector(".test-finir");
@@ -75,7 +92,7 @@ finishButton.addEventListener("click", (e) => {
   // результат
 
   if (score <= 3) {
-    modalText.textContent = "Je sais que vous povez faire mieux!";
+    modalText.textContent = "Je sais que vous pouvez faire mieux!";
   } else if (score <= 6) {
     modalText.textContent =
       "Pas mal ! Mais votre objectif est encore devant vous!";
